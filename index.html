@@ -1,159 +1,171 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>История ресторана Vkusno.net</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: Arial, sans-serif;
-			background-color: #f2f2f2;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История ресторана Vkusno.net</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
             background-image: url("https://joinposter.com/i/site/blog/music_cafe2a.jpg");
             background-size: cover;
             background-position: center;
             color: #fff;
-		}
+        }
         header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  nav a {
-    color: #D3D3D3;
-    text-decoration: none;
-  }
-		main {
-			max-width: 1200px;
-			margin: 0 auto;
-			padding: 20px;
-		}
-		.hero {
-			background-image: url('hero.jpg');
-			background-size: cover;
-			background-position: center;
-			height: 500px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-			color: #fff;
-		}
-		.hero h1 {
-			font-size: 48px;
-			margin-bottom: 20px;
-		}
-		.btn {
-			display: inline-block;
-			background-color: #fff;
-			color: #333;
-			padding: 10px 20px;
-			border-radius: 5px;
-			text-decoration: none;
-			margin-top: 20px;
-		}
-		.about {
-			margin-top: 50px;
-		}
-		.about h2 {
-			font-size: 36px;
-			margin-bottom: 20px;
-		}
-		.about p {
-			font-size: 18px;
-			line-height: 1.5;
-			margin-bottom: 20px;
-		}
-		.history {
-			margin-top: 50px;
-		}
-		.history h2 {
-			font-size: 36px;
-			margin-bottom: 20px;
-		}
-		.history p {
-			font-size: 18px;
-			line-height: 1.5;
-			margin-bottom: 20px;
-		}
-		footer {
-			background-color: #333;
-			color: #fff;
-			padding: 10px;
-			text-align: center;
-		}
-        .da {
-			background-color: rgba(0, 0, 0, 0.5);
-			color: #fff;
-			padding: 15px 25px;
-			border-radius: 7px;
-			margin-top: 100px;
-			margin-bottom: 100px;
-		}
-        .hidden {
-            display: none;
-        }
-        .show-more {
-            cursor: pointer;
+            background-color: #333;
             color: #fff;
-            text-decoration: underline;
+            padding: 10px;
         }
-	</style>
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav a {
+            color: #D3D3D3;
+            text-decoration: none;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero {
+            background-image: url('hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #fff;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .about {
+            margin-top: 50px;
+        }
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .history {
+            margin-top: 50px;
+        }
+        .history h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .history p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+			position: fixed;
+			width: 100%;
+			height: 500px;
+        }
+
+    .toggle-btn {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+    }
+
+    .content.show {
+      max-height: 500px; /* Высота блока при открытии */
+    }
+  
+        .da {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 7px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    </style>
 </head>
 <body>
-	<header>
-		<h1>Vkusno.net</h1>
+    <header>
+        <h1>Vkusno.net</h1>
         <nav>
             <ul>
-              <li><a href="https://ha4ku.github.io/restmain/">Главная</a></li>
-              <li><a href="https://ha4ku.github.io/restmenu/">Меню</a></li>
-              <li><a href="https://ha4ku.github.io/restbron/">Бронирование</a></li>
-              <li><a href="https://ha4ku.github.io/resthist/">О нас</a></li>
-              <li><a href="https://ha4ku.github.io/restcont/">Контакты</a></li>
+                <li><a href="https://ha4ku.github.io/restmain/">Главная</a></li>
+                <li><a href="https://ha4ku.github.io/restmenu/">Меню</a></li>
+                <li><a href="https://ha4ku.github.io/restbron/">Бронирование</a></li>
+                <li><a href="https://ha4ku.github.io/resthist/">О нас</a></li>
+                <li><a href="https://ha4ku.github.io/restcont/">Контакты</a></li>
             </ul>
-          </nav>
-	</header>
-	<main class="da">
-		<section class="about">
-			<h2>О нас</h2>
-			<p>Ресторан Vkusno был основан в 2005 году известным французским шеф-поваром Жан-Пьером. Он решил создать ресторан, который бы предлагал своим гостям настоящие французские блюда, приготовленные по традиционным рецептам, и в то же время был бы доступен для всех.</p>
-			<p>С тех пор ресторан Vkusno стал одним из самых популярных мест в городе, где можно насладиться изысканными блюдами и отличным сервисом. Наша команда состоит из профессионалов, которые любят свою работу и делают все возможное, чтобы каждый гость чувствовал себя особенным.</p>
-		</section>
-		<section class="history">
-			<h2>История ресторана</h2>
-			<p>Ресторан Vkusno был открыт в 2005 году в центре города. С самого начала он стал популярным местом для тех, кто любит настоящую французскую кухню. Шеф-повар Жан-Пьер создал меню, которое включало в себя все самые популярные блюда французской кухни, а также несколько авторских блюд.</p>
-			<p>С течением времени ресторан стал известен не только своей кухней, но и отличным сервисом. Наша команда профессионалов делает все возможное, чтобы каждый гость чувствовал себя особенным. Мы постоянно совершенствуем нашу работу и стараемся удивлять наших гостей новыми блюдами и напитками.</p>
-			<p class="hidden">Сегодня ресторан Vkusno является одним из самых популярных мест в городе, где можно насладиться изысканными блюдами и отличным сервисом. Мы благодарим всех наших гостей за то, что они выбирают наш ресторан и обещаем продолжать радовать их своей кухней и сервисом.</p>
-            <p class="show-more">Показать больше</p>
-		</section>
-	</main>
-	<footer>
-		<p>&copy; 2021 Vkusno.net Все права защищены.</p>
-	</footer>
+        </nav>
+    </header>
+    <main class="da">
+        <section class="about">
+            <h2>О нас</h2>
+            <p>Ресторан Vkusno был основан в 2005 году известным французским шеф-поваром Жан-Пьером. Он решил создать ресторан, который бы предлагал своим гостям настоящие французские блюда, приготовленные по традиционным рецептам, и в то же время был бы доступен для всех.</p>
+            <p>С тех пор ресторан Vkusno стал одним из самых популярных мест в городе, где можно насладиться изысканными блюдами и отличным сервисом. Наша команда состоит из профессионалов, которые любят свою работу и делают все возможное, чтобы каждый гость чувствовал себя особенным.</p>
+        </section>
+		<div class="container">
+			<div class="content show" id="myContent">
+				<h2>История о ресторане</h2>
+				<p>Ресторан Vkusno был открыт в 2005 году в центре города. С самого начала он стал популярным местом для тех, кто любит настоящую французскую кухню. Шеф-повар Жан-Пьер создал меню, которое включало в себя все самые популярные блюда французской кухни, а также несколько авторских блюд.
+
+					С течением времени ресторан стал известен не только своей кухней, но и отличным сервисом. Наша команда профессионалов делает все возможное, чтобы каждый гость чувствовал себя особенным. Мы постоянно совершенствуем нашу работу и стараемся удивлять наших гостей новыми блюдами и напитками.</p>
+			</div>
+			<button class="toggle-btn" onclick="toggleContent()">Открыть/Закрыть блок</button>
+		  </div>
+    </main>
+    <footer>
+        <p>&copy; 2021 Vkusno.net Все права защищены.</p>
+    </footer>
 	<script>
-        const showMoreButton = document.querySelector('.show-more');
-        const hiddenText = document.querySelector('.hidden');
-        
-        showMoreButton.addEventListener('click', () => {
-            hiddenText.classList.toggle('hidden');
-            if (hiddenText.classList.contains('hidden')) {
-                showMoreButton.textContent = 'Показать больше';
-            } else {
-                showMoreButton.textContent = 'Скрыть';
-            }
-        });
+
+function toggleContent() {
+    var content = document.getElementById("myContent");
+    content.classList.toggle("show");
+  }
     </script>
 </body>
 </html>
